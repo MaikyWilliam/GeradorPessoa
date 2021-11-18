@@ -38,7 +38,10 @@ class GeradorPessoa {
             await this.driver.sleep(1000);
             await this.driver.findElement(By.xpath('//*[@id="area_resposta_json"]/div/button[2]')).click();
             await this.driver.findElement(By.xpath('//*[@id="area_resposta_json"]/div/button[2]')).click();
-    
+            
+            // "Colar" o que foi copiado no 4Devs
+            // await driver.actions().keyDown(Key.CONTROL).sendKeys('v').perform();
+
             let data = await this.driver.findElement(By.id('dados_json')).getText();
 
             return data;
